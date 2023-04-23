@@ -4,8 +4,4 @@ export default class GameSaving {
     this.created = saving.created;
     this.userInfo = saving.userInfo;
   }
-
-  toString() {
-    return JSON.stringify(this);
-  }
 }
