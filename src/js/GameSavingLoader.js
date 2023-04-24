@@ -4,10 +4,8 @@ import GameSaving from './GameSaving';
 
 export default class GameSavingLoader {
   static load() {
-    return new Promise((resolve) => {
-      read().then((data) => json(data)).then((data) => {
-        resolve(new GameSaving(JSON.parse(data)));
-      });
+    return read().then((data) => json(data)).then((data) => {
+      return new GameSaving(JSON.parse(data));
     });
   }
 }
